@@ -1,0 +1,136 @@
+.header{
+  background-image: url("../img/header-background.png");
+  @include background-img;
+  height: 800px;
+
+  &__flex-container{
+    @include flex;
+    padding-top: 30px;
+  }
+  &__menu-list{
+    @include flex;
+    width: 60%;
+  }
+  &__menu-list-hidden{
+    @include flex;
+  }
+  &__menu-item{
+    list-style: none;
+  }
+  &__menu-link{
+    text-decoration: none;
+    color: $color-secondary;
+    font-family: $main-font;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+  }
+  &__menu-link:hover{
+    color: $color-main;
+  }
+
+  &__logo-hover-img{
+    display: none;
+    vertical-align: middle;
+  }
+  &__logo:hover &__logo-hover-img{
+    display: inline;
+  }
+  &__logo:hover &__logo-img{
+    display: none;
+  }
+  &__logo:hover &__logo-text{
+    color: $color-main;
+  }
+  &__logo-text{
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: $font-size-big;
+    font-family: $main-font;
+    color: $color-secondary;
+    cursor: pointer;
+  }
+  &__logo-img{
+    vertical-align: middle;
+  }
+
+  &__title{
+    font-family: $main-font;
+    font-size: 50px;
+    font-weight: $font-weight-bold;
+    color: $color-main;
+    text-align: center;
+    margin-top: 100px;
+  }
+  &__subtitle{
+    font-family: $secondary-font;
+    font-size: $font-size-main;
+    font-weight: $font-weight-normal;
+    color: $color-secondary;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__app-version{
+    font-family: $main-font;
+    font-size: $font-size-main;
+    font-weight: $font-weight-normal;
+    color: #848E97;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  &__button{
+    font-family: $main-font;
+    font-size: $font-size-main;
+    font-weight: $font-weight-bold;
+    color: $color-main;
+    background-color: $color-secondary;
+    width: 145px;
+    height: 37px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+  }
+  &__button:hover{
+    background-color: $color-main;
+    color: $color-secondary;
+    border: 1px solid #8D81AC;
+  }
+  &__button--large{
+    position: absolute;
+    width: 400px;
+    height: 62px;
+    left: calc(50% - 200px);
+    top: 767px;
+    border-radius: 40px;
+  }
+  &__button--large:hover{
+    border: 2px solid #8D81AC;
+  }
+
+
+  &__tablet{
+    width: 100%;
+    background: #27262A;
+    display: none;
+  }
+  &__tablet-flex{
+    @include flex;
+    padding: 20px 20px 0;
+  }
+  &__tablet > &__menu-list{
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+
+  &__mobile{
+    display: none;
+    width: 100%;
+    background: #27262A;
+    justify-content: space-around;
+    height: 100px;
+  }
+  &__mobile > &__logo, &__button{
+    margin: auto 0;
+  }
+}

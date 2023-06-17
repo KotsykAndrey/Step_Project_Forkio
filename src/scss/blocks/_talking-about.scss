@@ -1,0 +1,50 @@
+.talking-about{
+  background-image: url("../img/talking-about-bg.png");
+  @include background-img;
+
+  &__paragraph-trial{
+    color: #848E97;
+    text-align: center;
+    padding-top: 30px;
+    font-family: $main-font;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+  }
+
+  &__title{
+    font-family: $main-font;
+    font-size: 50px;
+    font-weight: $font-weight-bold;
+    color: $color-main;
+    text-align: center;
+    padding-top: 80px;
+  }
+  &__list {
+    @include flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    @include flex;
+    list-style: none;
+    width: calc(100% / 3 - 50px);
+    height: 130px;
+    color: $color-main;
+    font-family: $secondary-font;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-main;
+    font-style: italic;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+  }
+  &__paragraph-bottom{
+    color: #A291A5;
+    font-family: $secondary-font;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    text-align: center;
+    border-bottom: 2px solid #645766;
+    margin-top: 80px;
+    padding: 20px 0;
+  }
+}
